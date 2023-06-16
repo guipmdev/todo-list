@@ -1,3 +1,5 @@
+import "./global.css";
+
 import { PlusCircle, Trash } from "@phosphor-icons/react";
 
 import toDoLogo from "./assets/todo-logo.svg";
