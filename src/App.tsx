@@ -1,5 +1,7 @@
 import "./global.css";
 
+import styles from "./App.module.css";
+
 import { PlusCircle, Trash } from "@phosphor-icons/react";
 
 import { Header } from "./components/Header";
@@ -11,7 +13,7 @@ export function App() {
     <div>
       <Header />
 
-      <div>
+      <div className={styles.wrapper}>
         <form>
           <input type="text" placeholder="Adicione uma nova tarefa" />
           <button type="submit">
