@@ -2,15 +2,14 @@ import "./global.css";
 
 import { PlusCircle, Trash } from "@phosphor-icons/react";
 
-import toDoLogo from "./assets/todo-logo.svg";
+import { Header } from "./components/Header";
+
 import clipboardIcon from "./assets/clipboard-icon.svg";
 
 export function App() {
   return (
     <div>
-      <header>
-        <img src={toDoLogo} alt="Logotipo do ToDo" />
-      </header>
+      <Header />
 
       <div>
         <form>
