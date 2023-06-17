@@ -2,34 +2,45 @@
   display: flex;
   gap: 0.5rem;
 }
+
 .taskForm input {
-  background: var(--gray-500);
+  padding: 1rem;
   border: none;
   border-radius: 8px;
   box-shadow: 0 0 0 1px var(--gray-700);
-  color: var(--gray-300);
-  padding: 1rem;
+
   width: 100%;
+  background: var(--gray-500);
+
+  color: var(--gray-300);
 }
 
-.taskFosrm input:focus {
+.taskForm input:focus {
   box-shadow: 0 0 0 1px var(--purple-dark);
+
   color: var(--gray-100);
 }
+
 .taskForm button[type="submit"] {
   display: flex;
-  border: none;
   align-items: center;
-  background: var(--blue-dark);
+  gap: 0.5rem;
+
+  padding: 1rem;
+  border: none;
   border-radius: 8px;
+
+  background: var(--blue-dark);
+
   color: var(--gray-100);
-  cursor: pointer;
   font-size: 0.875rem;
   font-weight: bold;
-  gap: 0.5rem;
-  padding: 1rem;
+
+  cursor: pointer;
+
   transition: 0.1s background-color;
 }
+
 .taskForm button[type="submit"]:hover {
   background: var(--blue);
 }
