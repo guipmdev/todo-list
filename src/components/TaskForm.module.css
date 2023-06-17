@@ -9,8 +9,8 @@
   border-radius: 8px;
   box-shadow: 0 0 0 1px var(--gray-700);
 
-  width: 100%;
   background: var(--gray-500);
+  width: 100%;
 
   color: var(--gray-300);
 }

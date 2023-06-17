@@ -37,3 +37,7 @@
   color: var(--gray-100);
   font-size: 0.75rem;
 }
+
+.taskList {
+  padding-top: 1.5rem;
+}

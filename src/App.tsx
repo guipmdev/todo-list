@@ -6,8 +6,7 @@ import { Trash } from "@phosphor-icons/react";
 
 import { Header } from "./components/Header";
 import { TaskForm } from "./components/TaskForm";
-
-import clipboardIcon from "./assets/clipboard-icon.svg";
+import { EmptyTaskList } from "./components/EmptyTaskList";
 
 export function App() {
   return (
@@ -27,17 +26,9 @@ export function App() {
             </div>
           </header>
 
-          <main>
-            <div>
-              <img src={clipboardIcon} alt="ícone de prancheta" />
+          <div className={styles.taskList}>
+            <EmptyTaskList />
 
-              <div>
-                <p>
-                  <strong>Você ainda não tem tarefas cadastradas</strong>
-                </p>
-                <p>Crie tarefas e organize seus itens a fazer</p>
-              </div>
-            </div>
             <ul>
               <li>
                 <input type="checkbox" />
@@ -100,7 +91,7 @@ export function App() {
                 </button>
               </li>
             </ul>
-          </main>
+          </div>
         </main>
       </div>
     </div>
