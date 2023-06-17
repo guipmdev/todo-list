@@ -19,11 +19,11 @@ export function App() {
 
         <main>
           <header>
-            <div>
-              Tarefas criadas <span>5</span>
+            <div className={styles.createdTasksCounter}>
+              Tarefas criadas<span className={styles.pillCounter}>5</span>
             </div>
-            <div>
-              Concluídas <span>2 de 5</span>
+            <div className={styles.finishedTasksCounter}>
+              Concluídas<span className={styles.pillCounter}>2 de 5</span>
             </div>
           </header>
 

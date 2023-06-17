@@ -7,3 +7,33 @@
 
   max-width: 46rem;
 }
+
+.wrapper main header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createdTasksCounter,
+.finishedTasksCounter {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.createdTasksCounter {
+  color: var(--blue);
+}
+
+.finishedTasksCounter {
+  color: var(--purple);
+}
+
+.pillCounter {
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  margin-left: 0.5rem;
+
+  background: var(--gray-400);
+
+  color: var(--gray-100);
+  font-size: 0.75rem;
+}
