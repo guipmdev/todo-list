@@ -8,7 +8,7 @@ export function TaskForm() {
       <input type="text" placeholder="Adicione uma nova tarefa" />
 
       <button type="submit">
-        Criar <PlusCircle size={16} weight="bold" />
+        Criar <PlusCircle size={17} />
       </button>
     </form>
   );
