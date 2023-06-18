@@ -4,7 +4,7 @@
   align-items: center;
   gap: 1rem;
 
-  padding: 4rem;
+  padding: 4rem 0;
   border-radius: 8px;
 
   box-shadow: 0 -2px 0 -1px var(--gray-400);
