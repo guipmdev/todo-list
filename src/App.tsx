@@ -2,11 +2,10 @@ import "./global.css";
 
 import styles from "./App.module.css";
 
-import { Trash } from "@phosphor-icons/react";
-
 import { Header } from "./components/Header";
 import { TaskForm } from "./components/TaskForm";
 import { EmptyTaskList } from "./components/EmptyTaskList";
+import { Task } from "./components/Task";
 
 export function App() {
   return (
@@ -30,66 +29,7 @@ export function App() {
             <EmptyTaskList />
 
             <ul>
-              <li>
-                <input type="checkbox" />
-
-                <p>
-                  Integer urna interdum massa libero auctor neque turpis turpis
-                  semper. Duis vel sed fames integer.
-                </p>
-
-                <button>
-                  <Trash />
-                </button>
-              </li>
-              <li>
-                <input type="checkbox" />
-
-                <p>
-                  Integer urna interdum massa libero auctor neque turpis turpis
-                  semper. Duis vel sed fames integer.
-                </p>
-
-                <button>
-                  <Trash />
-                </button>
-              </li>
-              <li>
-                <input type="checkbox" />
-
-                <p>
-                  Integer urna interdum massa libero auctor neque turpis turpis
-                  semper. Duis vel sed fames integer.
-                </p>
-
-                <button>
-                  <Trash />
-                </button>
-              </li>
-              <li>
-                <input type="checkbox" />
-
-                <p>
-                  Integer urna interdum massa libero auctor neque turpis turpis
-                  semper. Duis vel sed fames integer.
-                </p>
-
-                <button>
-                  <Trash />
-                </button>
-              </li>
-              <li>
-                <input type="checkbox" />
-
-                <p>
-                  Integer urna interdum massa libero auctor neque turpis turpis
-                  semper. Duis vel sed fames integer.
-                </p>
-
-                <button>
-                  <Trash />
-                </button>
-              </li>
+              <Task />
             </ul>
           </div>
         </main>
