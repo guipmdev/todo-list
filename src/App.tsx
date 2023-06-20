@@ -32,19 +32,17 @@ export function App() {
 
   const [completedTasksNumber, setCompleteTasksNumber] = useState(0);
 
-  const updateCompletedTasksNumber = useCallback(() => {
-    return tasks.reduce((counter, task) => {
-      if (task.completed) {
-        return counter + 1;
-      } else {
-        return counter;
-      }
-    }, 0);
-  }, [tasks]);
-
   useEffect(() => {
-    setCompleteTasksNumber(updateCompletedTasksNumber);
-  }, [tasks, updateCompletedTasksNumber]);
+    setCompleteTasksNumber(
+      tasks.reduce((counter, task) => {
+        if (task.completed) {
+          return counter + 1;
+        } else {
+          return counter;
+        }
+      }, 0)
+    );
+  }, [tasks]);
 
   function createTask(newTaskContent: string) {
     const newTask = {
