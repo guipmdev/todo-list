@@ -6,14 +6,44 @@ import { Header } from "./components/Header";
 import { TaskForm } from "./components/TaskForm";
 import { EmptyTaskList } from "./components/EmptyTaskList";
 import { Task } from "./components/Task";
+import { useState } from "react";
+
+interface Task {
+  id: number;
+  completed: boolean;
+  text: string;
+}
 
 export function App() {
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      completed: false,
+      text: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+    },
+    {
+      id: 2,
+      completed: true,
+      text: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+    },
+  ]);
+
+  function createTask(newTaskText: string) {
+    const newTask = {
+      id: tasks[tasks.length - 1].id + 1,
+      completed: false,
+      text: newTaskText,
+    };
+
+    setTasks([...tasks, newTask]);
+  }
+
   return (
     <div>
       <Header />
 
       <div className={styles.wrapper}>
-        <TaskForm />
+        <TaskForm onCreateNewTask={createTask} />
 
         <main>
           <header>
