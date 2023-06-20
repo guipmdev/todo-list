@@ -9,11 +9,13 @@ import { TaskType } from "../App";
 interface TaskProps {
   task: TaskType;
   onUpdateTaskStatus: (taskId: number, newStatus: boolean) => void;
+  onDeleteTask: (taskId: number) => void;
 }
 
 export function Task({
   task: { id, content, completed },
   onUpdateTaskStatus,
+  onDeleteTask,
 }: TaskProps) {
   const [taskStatus, setTaskStatus] = useState(completed);
 
@@ -22,6 +24,10 @@ export function Task({
 
     setTaskStatus(newStatus);
     onUpdateTaskStatus(id, newStatus);
+  }
+
+  function handleDeleteTask() {
+    onDeleteTask(id);
   }
 
   return (
@@ -41,7 +47,7 @@ export function Task({
 
       <p>{content}</p>
 
-      <button className={styles.deleteButton}>
+      <button className={styles.deleteButton} onClick={handleDeleteTask}>
         <Trash size={15} />
       </button>
     </li>

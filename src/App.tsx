@@ -68,6 +68,16 @@ export function App() {
     );
   }
 
+  function deleteTask(taskId: number) {
+    setTasks(
+      tasks.filter((task) => {
+        if (task.id !== taskId) {
+          return task;
+        }
+      })
+    );
+  }
+
   return (
     <div>
       <Header />
@@ -101,6 +111,7 @@ export function App() {
                       key={task.id}
                       task={task}
                       onUpdateTaskStatus={updateTaskStatus}
+                      onDeleteTask={deleteTask}
                     />
                   );
                 })}
