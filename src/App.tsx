@@ -15,7 +15,7 @@ interface Task {
 }
 
 export function App() {
-  const [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState<Task[]>([
     {
       id: 1,
       completed: false,
@@ -30,7 +30,7 @@ export function App() {
 
   function createTask(newTaskText: string) {
     const newTask = {
-      id: tasks[tasks.length - 1].id + 1,
+      id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
       completed: false,
       text: newTaskText,
     };
@@ -68,19 +68,21 @@ export function App() {
           </header>
 
           <div className={styles.taskList}>
-            <EmptyTaskList />
-
-            <ul>
-              {tasks.map((task) => {
-                return (
-                  <Task
-                    key={task.id}
-                    text={task.text}
-                    completed={task.completed}
-                  />
-                );
-              })}
-            </ul>
+            {!tasks.length ? (
+              <EmptyTaskList />
+            ) : (
+              <ul>
+                {tasks.map((task) => {
+                  return (
+                    <Task
+                      key={task.id}
+                      text={task.text}
+                      completed={task.completed}
+                    />
+                  );
+                })}
+              </ul>
+            )}
           </div>
         </main>
       </div>
