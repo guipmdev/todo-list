@@ -62,7 +62,8 @@ export function App() {
             <div className={styles.finishedTasksCounter}>
               Concluídas
               <span className={styles.pillCounter}>
-                {completedTasksNumber} de {tasks.length}
+                {!!tasks.length && completedTasksNumber + " de "}
+                {tasks.length}
               </span>
             </div>
           </header>
