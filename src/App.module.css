@@ -43,5 +43,6 @@
   padding-top: 1.5rem;
 }
 
-.taskList ul {
+.taskList ul li + li {
+  margin-top: 0.75rem;
 }
