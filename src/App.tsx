@@ -1,7 +1,7 @@
 import "./global.css";
 import styles from "./App.module.css";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Header } from "./components/Header";
 import { TaskForm } from "./components/TaskForm";
