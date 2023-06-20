@@ -38,6 +38,14 @@ export function App() {
     setTasks([...tasks, newTask]);
   }
 
+  const completedTasksNumber = tasks.reduce((counter, task) => {
+    if (task.completed) {
+      return counter + 1;
+    } else {
+      return counter;
+    }
+  }, 0);
+
   return (
     <div>
       <Header />
@@ -48,10 +56,14 @@ export function App() {
         <main>
           <header>
             <div className={styles.createdTasksCounter}>
-              Tarefas criadas<span className={styles.pillCounter}>5</span>
+              Tarefas criadas
+              <span className={styles.pillCounter}>{tasks.length}</span>
             </div>
             <div className={styles.finishedTasksCounter}>
-              Concluídas<span className={styles.pillCounter}>2 de 5</span>
+              Concluídas
+              <span className={styles.pillCounter}>
+                {completedTasksNumber} de {tasks.length}
+              </span>
             </div>
           </header>
 
