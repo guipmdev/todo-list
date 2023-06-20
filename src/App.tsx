@@ -59,7 +59,15 @@ export function App() {
             <EmptyTaskList />
 
             <ul>
-              <Task />
+              {tasks.map((task) => {
+                return (
+                  <Task
+                    key={task.id}
+                    text={task.text}
+                    completed={task.completed}
+                  />
+                );
+              })}
             </ul>
           </div>
         </main>
