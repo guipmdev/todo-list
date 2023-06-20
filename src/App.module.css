@@ -15,7 +15,7 @@
 }
 
 .createdTasksCounter,
-.finishedTasksCounter {
+.completedTasksCounter {
   font-size: 0.875rem;
   font-weight: bold;
 }
@@ -24,7 +24,7 @@
   color: var(--blue);
 }
 
-.finishedTasksCounter {
+.completedTasksCounter {
   color: var(--purple);
 }
 

@@ -1,25 +1,45 @@
 import styles from "./Task.module.css";
 
+import { useState } from "react";
+
 import { Trash } from "@phosphor-icons/react";
 
+import { TaskType } from "../App";
+
 interface TaskProps {
-  text: string;
-  completed: boolean;
+  task: TaskType;
+  onUpdateTaskStatus: (taskId: number, newStatus: boolean) => void;
 }
 
-export function Task({ text, completed }: TaskProps) {
+export function Task({
+  task: { id, content, completed },
+  onUpdateTaskStatus,
+}: TaskProps) {
+  const [taskStatus, setTaskStatus] = useState(completed);
+
+  function handleTaskStatusChange() {
+    const newStatus = !taskStatus;
+
+    setTaskStatus(newStatus);
+    onUpdateTaskStatus(id, newStatus);
+  }
+
   return (
     <li
-      className={[styles.task, completed && styles.checkedTask]
+      className={[styles.task, taskStatus && styles.checkedTask]
         .filter((className) => !!className)
         .join(" ")}
     >
       <label className={styles.checkboxWrapper}>
-        <input type="checkbox" checked={completed} />
+        <input
+          type="checkbox"
+          checked={taskStatus}
+          onChange={handleTaskStatusChange}
+        />
         <span className={styles.checkmark}></span>
       </label>
 
-      <p>{text}</p>
+      <p>{content}</p>
 
       <button className={styles.deleteButton}>
         <Trash size={15} />

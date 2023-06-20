@@ -1,50 +1,72 @@
 import "./global.css";
-
 import styles from "./App.module.css";
+
+import { useCallback, useEffect, useState } from "react";
 
 import { Header } from "./components/Header";
 import { TaskForm } from "./components/TaskForm";
 import { EmptyTaskList } from "./components/EmptyTaskList";
 import { Task } from "./components/Task";
-import { useState } from "react";
 
-interface Task {
+export interface TaskType {
   id: number;
   completed: boolean;
-  text: string;
+  content: string;
 }
 
 export function App() {
-  const [tasks, setTasks] = useState<Task[]>([
+  const [tasks, setTasks] = useState<TaskType[]>([
     {
       id: 1,
       completed: false,
-      text: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+      content:
+        "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
     },
     {
       id: 2,
       completed: true,
-      text: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+      content:
+        "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
     },
   ]);
 
-  function createTask(newTaskText: string) {
+  const [completedTasksNumber, setCompleteTasksNumber] = useState(0);
+
+  const updateCompletedTasksNumber = useCallback(() => {
+    return tasks.reduce((counter, task) => {
+      if (task.completed) {
+        return counter + 1;
+      } else {
+        return counter;
+      }
+    }, 0);
+  }, [tasks]);
+
+  useEffect(() => {
+    setCompleteTasksNumber(updateCompletedTasksNumber);
+  }, [tasks, updateCompletedTasksNumber]);
+
+  function createTask(newTaskContent: string) {
     const newTask = {
       id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
       completed: false,
-      text: newTaskText,
+      content: newTaskContent,
     };
 
     setTasks([...tasks, newTask]);
   }
 
-  const completedTasksNumber = tasks.reduce((counter, task) => {
-    if (task.completed) {
-      return counter + 1;
-    } else {
-      return counter;
-    }
-  }, 0);
+  function updateTaskStatus(taskId: number, newStatus: boolean) {
+    setTasks(
+      tasks.map((task) => {
+        if (task.id === taskId) {
+          return { ...task, completed: newStatus };
+        } else {
+          return task;
+        }
+      })
+    );
+  }
 
   return (
     <div>
@@ -59,7 +81,7 @@ export function App() {
               Tarefas criadas
               <span className={styles.pillCounter}>{tasks.length}</span>
             </div>
-            <div className={styles.finishedTasksCounter}>
+            <div className={styles.completedTasksCounter}>
               Concluídas
               <span className={styles.pillCounter}>
                 {!!tasks.length && completedTasksNumber + " de "}
@@ -77,8 +99,8 @@ export function App() {
                   return (
                     <Task
                       key={task.id}
-                      text={task.text}
-                      completed={task.completed}
+                      task={task}
+                      onUpdateTaskStatus={updateTaskStatus}
                     />
                   );
                 })}

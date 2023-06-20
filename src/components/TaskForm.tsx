@@ -5,27 +5,27 @@ import { useState, FormEvent, ChangeEvent, InvalidEvent } from "react";
 import { PlusCircle } from "@phosphor-icons/react";
 
 interface TaskFormProps {
-  onCreateNewTask: (newTaskText: string) => void;
+  onCreateNewTask: (newTaskContent: string) => void;
 }
 
 export function TaskForm({ onCreateNewTask }: TaskFormProps) {
-  const [newTaskText, setNewTaskText] = useState("");
+  const [newTaskContent, setNewTaskContent] = useState("");
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
 
-    onCreateNewTask(newTaskText);
+    onCreateNewTask(newTaskContent);
 
-    setNewTaskText("");
+    setNewTaskContent("");
   }
 
-  function handleNewTaskTextChange(event: ChangeEvent<HTMLInputElement>) {
+  function handleNewTaskContentChange(event: ChangeEvent<HTMLInputElement>) {
     event.target.setCustomValidity("");
 
-    setNewTaskText(event.target.value);
+    setNewTaskContent(event.target.value);
   }
 
-  function handleTaskTextInvalid(event: InvalidEvent<HTMLInputElement>) {
+  function handleTaskContentInvalid(event: InvalidEvent<HTMLInputElement>) {
     event.target.setCustomValidity("Esse campo é necessário!");
   }
 
@@ -34,9 +34,9 @@ export function TaskForm({ onCreateNewTask }: TaskFormProps) {
       <input
         type="text"
         placeholder="Adicione uma nova tarefa"
-        value={newTaskText}
-        onChange={handleNewTaskTextChange}
-        onInvalid={handleTaskTextInvalid}
+        value={newTaskContent}
+        onChange={handleNewTaskContentChange}
+        onInvalid={handleTaskContentInvalid}
         required
       />
 
