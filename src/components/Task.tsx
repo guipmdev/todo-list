@@ -33,7 +33,7 @@ export function Task({
   return (
     <li
       className={[styles.task, taskStatus && styles.checkedTask]
-        .filter((className) => !!className)
+        .filter(className => !!className)
         .join(" ")}
     >
       <label className={styles.checkboxWrapper}>

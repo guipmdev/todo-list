@@ -51,12 +51,12 @@ export function App() {
       content: newTaskContent,
     };
 
-    setTasks((state) => [...state, newTask]);
+    setTasks(state => [...state, newTask]);
   }
 
   function updateTaskStatus(taskId: number, newStatus: boolean) {
-    setTasks((state) => 
-      state.map((task) => {
+    setTasks(
+      tasks.map(task => {
         if (task.id === taskId) {
           return { ...task, completed: newStatus };
         } else {
@@ -67,8 +67,8 @@ export function App() {
   }
 
   function deleteTask(taskId: number) {
-    setTasks((state) => 
-      state.filter((task) => {
+    setTasks(
+      tasks.filter(task => {
         if (task.id !== taskId) {
           return task;
         }
@@ -103,7 +103,7 @@ export function App() {
               <EmptyTaskList />
             ) : (
               <ul>
-                {tasks.map((task) => {
+                {tasks.map(task => {
                   return (
                     <Task
                       key={task.id}
