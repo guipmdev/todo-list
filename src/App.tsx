@@ -55,8 +55,8 @@ export function App() {
   }
 
   function updateTaskStatus(taskId: number, newStatus: boolean) {
-    setTasks(
-      tasks.map(task => {
+    setTasks((state) => 
+      state.map(task => {
         if (task.id === taskId) {
           return { ...task, completed: newStatus };
         } else {
@@ -67,8 +67,8 @@ export function App() {
   }
 
   function deleteTask(taskId: number) {
-    setTasks(
-      tasks.filter(task => {
+    setTasks((state) =>
+      state.filter(task => {
         if (task.id !== taskId) {
           return task;
         }
