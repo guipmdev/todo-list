@@ -22,8 +22,8 @@ export function Task({
   function handleTaskStatusChange() {
     const newStatus = !taskStatus;
 
-    setTaskStatus(newStatus);
     onUpdateTaskStatus(id, newStatus);
+    setTaskStatus(newStatus);
   }
 
   function handleDeleteTask() {

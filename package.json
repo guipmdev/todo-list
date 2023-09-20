@@ -1,7 +1,7 @@
 {
-  "name": "todo-list_desafio-react",
+  "name": "todo-list",
+  "description": "React-based web app for effective task management and productivity enhancement.",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -25,5 +25,16 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guipmdev/todo-list.git"
+  },
+  "author": {
+    "name": "Guilherme Preveda Milék",
+    "email": "guipmdev@gmail.com",
+    "url": "https://guipm.dev/"
+  },
+  "license": "MIT",
+  "homepage": "https://guipmdev-todo-list.vercel.app/"
 }
