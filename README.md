@@ -106,6 +106,8 @@ The project's main goal is to help individuals keep track of their tasks and imp
 
 ## 🤖 Demo
 
+https://github.com/guipmdev/todo-list/assets/136738335/b668d8c3-ff18-433d-9752-d1164a8bb97c
+
 ## 🎨 Layout
 
 The layout of the application was designed by **Rocketseat** and is available on [Figma](https://www.figma.com/file/sibtTK1vd9AtZcnDg6TuDk/ToDo-List-%E2%80%A2-Desafio-React).
