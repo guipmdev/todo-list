@@ -106,6 +106,8 @@ O principal objetivo do projeto é ajudar as pessoas a manter o controle de suas
 
 ## 🤖 Demo
 
+https://github.com/guipmdev/todo-list/assets/136738335/b668d8c3-ff18-433d-9752-d1164a8bb97c
+
 ## 🎨 Layout
 
 O layout da aplicação foi projetado pela **Rocketseat** e está disponível no [Figma](https://www.figma.com/file/sibtTK1vd9AtZcnDg6TuDk/ToDo-List-%E2%80%A2-Desafio-React).
