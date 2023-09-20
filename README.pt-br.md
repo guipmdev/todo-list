@@ -100,7 +100,7 @@ O principal objetivo do projeto é ajudar as pessoas a manter o controle de suas
 
 ## ✨ Funcionalidades
 
-✅ **Gerencie suas tarefas** criando, concluindo e excluindo-as conforme necessário
+✅ **Gerencie tarefas** criando, concluindo e excluindo-as conforme necessário
 
 ## 🤖 Demo
 

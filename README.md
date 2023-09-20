@@ -100,7 +100,7 @@ The project's main goal is to help individuals keep track of their tasks and imp
 
 ## ✨ Features
 
-✅ **Manage your tasks** by creating, concluding and deleting them as needed
+✅ **Manage tasks** by creating, concluding and deleting them as needed
 
 ## 🤖 Demo
 
