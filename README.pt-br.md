@@ -13,7 +13,7 @@
   />
 </p>
 
-<p align="center">
+<h1 align="center">
   <a
     href="https://guipmdev-todo-list.vercel.app/"
     title="Acessar a aplicação web"
@@ -24,7 +24,7 @@
       height="60px"
     />
   </a>
-</p>
+</h1>
 
 <p align="center">
   <img
