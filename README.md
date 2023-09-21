@@ -93,9 +93,9 @@
 
 ## 📍 Overview
 
-The Todo List project is a _React_ application that allows users to create, conclude, and delete tasks. It provides a user-friendly interface where tasks can be organized and managed effectively.
+This project is a web application developed in _React_ that allows users to create, complete and delete tasks, with an easy-to-use interface that helps with effective task management.
 
-The project's main goal is to help individuals keep track of their tasks and improve their productivity by providing a simple and intuitive task management system. With its capabilities, the application offers a valuable tool for individuals seeking to better organize and manage their tasks.
+Its main objective is to help people keep track of their tasks and increase their productivity by providing a simple and intuitive task management system.
 
 ## ✨ Features
 
