@@ -1,6 +1,6 @@
 {
   "name": "todo-list",
-  "description": "React-based web app for effective task management and productivity enhancement.",
+  "description": "Web app for effective task management and productivity enhancement",
   "private": true,
   "type": "module",
   "scripts": {
