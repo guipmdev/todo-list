@@ -9,7 +9,6 @@
   <img
     src="https://img.shields.io/badge/lang-pt--br-gray?style=flat-square&labelColor=202024"
     alt="lang-pt-br"
-    title="You are reading the README in Brazilian portuguese"
   />
 </p>
 
@@ -94,9 +93,9 @@
 
 ## 📍 Visão geral
 
-O projeto Todo List é uma aplicação _React_ que permite aos usuários criar, concluir e excluir tarefas. Ela oferece uma interface fácil de usar, na qual as tarefas podem ser organizadas e gerenciadas de forma eficaz.
+Esse projeto é uma aplicação web desenvolvida em _React_ que permite aos usuários criar, concluir e excluir tarefas, tendo uma interface fácil de usar que auxilia no gerenciamento eficaz de afazeres.
 
-O principal objetivo do projeto é ajudar as pessoas a manter o controle de suas tarefas e aumentar sua produtividade, fornecendo um sistema de gerenciamento de tarefas simples e intuitivo. Com seus recursos, o aplicativo oferece uma ferramenta valiosa para pessoas que buscam organizar e gerenciar melhor suas tarefas.
+Seu objetivo principal é ajudar as pessoas a manter o controle de suas tarefas e aumentar sua produtividade, fornecendo um sistema de gerenciamento de tarefas simples e intuitivo.
 
 ## ✨ Funcionalidades
 
