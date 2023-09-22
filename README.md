@@ -19,7 +19,7 @@
   >
     <img
       src="./src/assets/todo-logo.svg"
-      alt="Todo List logo"
+      alt="ToDo List logo"
       height="60px"
     />
   </a>

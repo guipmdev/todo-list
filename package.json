@@ -30,6 +30,9 @@
     "type": "git",
     "url": "git+https://github.com/guipmdev/todo-list.git"
   },
+  "bugs": {
+    "url": "https://github.com/guipmdev/todo-list/issues"
+  },
   "author": {
     "name": "Guilherme Preveda Milék",
     "email": "guipmdev@gmail.com",

@@ -19,7 +19,7 @@
   >
     <img
       src="./src/assets/todo-logo.svg"
-      alt="Logo do Ignite Feed"
+      alt="Logo do ToDo List"
       height="60px"
     />
   </a>
